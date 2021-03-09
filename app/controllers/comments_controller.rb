@@ -24,7 +24,8 @@ before_action :find_comment, only: [:edit, :update, :destroy]
   end
 
   def destroy
-
+	@comment.destroy
+	redirect_to message_path(@message)
   end
 
   private
