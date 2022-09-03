@@ -3,8 +3,10 @@
   <p><%= @message.description %></p>
   <hr><hr>
   <%= render @message.comments %>
+  <% if user_signed_in? %>
   <h3>Reply to message</h3>
   <%= render 'comments/form' %>
+  <% end %>
   
   <%= link_to "Back", root_path %>
   <% if user_signed_in? %>
